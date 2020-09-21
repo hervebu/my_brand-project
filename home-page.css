@@ -43,7 +43,7 @@ a {
     color: rgb(0, 0, 0);
     margin-top: 15%;
     margin-left: 5%;
-    font-size: 50px;
+    font-size: 55px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
     
 
@@ -84,7 +84,7 @@ a {
     width:40%;
     font-size: 25px;
     text-align: left;
-    ffont-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #div-3 {
@@ -188,7 +188,6 @@ a {
 .help-div-btn {
     margin: 0 35%;
     width: 30%;
-    position: center;
     font-weight: bold;
     font-size: 16px;
     color: rgba(255, 255, 255, 0.719);
@@ -196,7 +195,7 @@ a {
 #blogs {
     width: 100%;
     background-color: #C4C4C450;
-    height: 600px;
+    height: 700px;
 
 }
 .blogs-heading {
@@ -206,7 +205,7 @@ a {
 .blog-box {
     display: inline-block;
     width: 20%;
-    height: 60%;
+    height: 40%;
     margin: 5% 5%;
 }
 .blog-box-1 {
@@ -224,6 +223,10 @@ a {
     font-size: 20px;
     margin-bottom: 0;
 }
+.more-blogs-btn {
+    
+    color: black;
+}
 footer {
     background-color: #000;
     width: 100%;
@@ -235,14 +238,12 @@ footer {
     color: rgba(255, 255, 255, 0.836);
 
 }
-.footer-nav {
-    
-}
+
 .footer-nav-btn {
     display: inline-block;
     margin: 0% 4% 4%;
     text-decoration: none;
-    color: #ffffff;
+    color: rgba(255, 255, 255, 0.836);
     font-size: 13px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 1% 1.5%;
@@ -257,7 +258,7 @@ footer {
 
 .social-media-box {
     display: inline-block;
-    text-decoration: none;
+    
 }
 .social-media-icons {
     width: 12%;
@@ -267,7 +268,7 @@ footer {
 }
 .social-media-usernames {
     display: inline-block;
-    color: #ffffffc5;
+    color: rgba(255, 255, 255, 0.767);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: center;
     margin:  1% 0 ;
@@ -287,10 +288,13 @@ footer {
 
 @media only screen and (min-width:769px) and (max-width:998px) {
   .homepage-top-div {
-      height: 400px;
+      height: 600px;
   }
   .homepage-top-div-text {
     font-size: 40px;
+  }
+  #div-2 {
+      height:600px ;
   }
   #div-2-text {
     font-size:20px;
