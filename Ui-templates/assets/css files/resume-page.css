@@ -1,0 +1,55 @@
+.my-resume-div {
+    height: 900px;
+    background-color: #C4C4C450;
+}
+.my-resume-content {
+    width: 100%;
+    display: block; 
+    margin-top: 5%;
+    background-color: blanchedalmond;
+     
+
+}
+.my-resume-list-heading {
+    
+    display: inline-block;
+    width: 40%;
+    
+    text-align: center;
+    margin: 0 0 0% 10%;
+    font-size: 30px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.my-resume-content-list {
+    display: inline-block;
+    
+    width: 40%;
+    margin: 10% 0% 0 5%;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    line-height: 30px;
+}
+
+
+
+
+
+
+.resume-contact-sect {
+    height: 400px;
+    background-color: #ffffff;
+}
+.resume-contact-heading {
+    margin: 10% 20% 3%;
+    font-size: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+.resume-contact-text {
+    margin: 0 25% 5%;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+}
