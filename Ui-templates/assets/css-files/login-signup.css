@@ -1,0 +1,54 @@
+.homepage-top-div {
+    background: url("../images/blog-image.png");
+}
+.login-signup-form {
+    display: inline-block;
+    width: 30%;
+    height: 70%;
+    color: #EE7E17; 
+    background-color: hsla(0, 0%, 0%, 0.623); 
+    margin: 5% 5%;
+    padding-top: 2%; 
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.signup-box {
+    margin-left: 10%;
+}
+form {
+    font-size: 12px;
+}
+.signup-title {
+    
+    padding-top: 5px;
+    text-align: center;
+}    
+input {
+    width: 80%;
+    height: 30px;
+    margin: 1% 10%;
+    background-color: #ffffff00;
+    color: #fafafa9f;
+    border: 1px solid #EE7E17;
+    outline: none;
+}
+#birthdate-input {
+    width: 50%;
+    margin-right: 10px;
+}
+#admin-check, #guest-check {
+    width: 5%;
+    margin-right:0;
+    height: 15px;
+}
+[type="submit"], [type="button"] {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    width: 81%;
+}
+[type="submit"]:hover, [type="button"]:hover {
+    background-color: #EE7E17;
+    color: #000000;
+}
+.login-box {
+    height: 40%;
+}

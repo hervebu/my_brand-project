@@ -1,0 +1,67 @@
+
+
+.homepage-top-div {
+    
+    background: url(../images/contact-img.png);
+    background-size: cover;
+    background-color: #0000007e;
+}
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0);
+}
+.nav-bar-ul-btns {
+    color: #EE7E17;
+}
+.nav-bar-ul-btns:hover {
+    color: #ffffff;
+}
+
+#blogs {
+    height: 1300px;
+}
+.homepage-top-div-text {
+    color: rgb(255, 255, 255);
+}
+.projects-heading {
+    margin-left: 5% 5% 5% 25%;
+    font-size: 30px;
+}
+form {
+    background-color: #ffffffa9;
+    width: 60%;
+    margin: 5% 20%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding: 20px;
+    
+}
+input {
+    width: 90%;
+    border: 2px solid #EE7E17;
+    margin: 0  0 5%;
+    height: 30px;
+    outline: none;
+}
+textarea {
+    width: 90%;
+    border: 2px solid #EE7E17;
+    margin: 0  0 5%;
+    outline: none;
+}
+[type="submit"] {
+    background-color: #EE7E17;
+    font-weight: bold;
+    width: 40%;
+    height: 30px;
+}
+.call-heading {
+    font-size: 25px;
+}
+.call-number {
+    font-size: 25px;
+    color: #EE7E17;
+    margin: 10px 40%;
+}
+.address-head {
+    margin: 5% 35% 0;
+}
