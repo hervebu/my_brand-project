@@ -1,4 +1,9 @@
-
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.897);
+}
+.nav-bar-ul-btns {
+    color: #000000;
+}
 .homepage-top-div-text {
     font-size: 60px;
 }

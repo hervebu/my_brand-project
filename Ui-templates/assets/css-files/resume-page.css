@@ -1,3 +1,9 @@
+.nav-bar {
+    background-color: rgba(0, 0, 0, 0.623);
+}
+.nav-bar-ul-btns {
+    color: #ffffff;
+}    
 .my-resume-div {
     height: 700px;
     padding-top: 5%;
