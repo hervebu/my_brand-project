@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="icon" href="./assets/images/Frame 3.png">
+        <link  rel="stylesheet" type="text/css" href="./assets/css-files/home-page.css">
+        <link  rel="stylesheet" type="text/css" href="./assets/css-files/admin-page.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Manage your blog</title>
+    </head>
+    <body>
+
+        <div class="homepage-top-div" >
+            <nav class="nav-bar" >
+                
+                <a href="index.html"><img class="mylogo" src="./assets/images/Frame 3.png"></a>
+                <ul class="nav-bar-ul">
+                    <a href="portfolio-page.html"><li class="nav-bar-ul-btns">PORTFOLIO</li></a>
+                    <a href="resume-page.html"><li class="nav-bar-ul-btns">RESUME</li></a>
+                    <a href=""><li class="nav-bar-ul-btns">ABOUT</li></a>
+                    <a href="blog-page.html"><li class="nav-bar-ul-btns">MY BLOG</li></a>
+                    <a href="contact-page.html"><li class="nav-bar-ul-btns">CONTACT</li></a>
+                    <li class="user-icon"><img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/></li>
+                </ul>
+                
+            </nav>
+         <div class="profile-edit">
+                        <form action="">
+                            <h1 class="profile-edit-heading">My Profile</h1>
+                            User name:<input type="text" id="user-name" disabled value="user name"><button class="edit-btn" onclick="">edit</button><br>
+                            Full name:<input type="text" id="full-name" disabled value="user full name"><button class="edit-btn" onclick="">edit</button><br>
+                            Email:<input type="email" id="user-e-email" disabled value="user email"><button class="edit-btn" onclick="">edit</button><br>
+                            Password:<input type="password" id="user-e-passw" disabled value="my password"><button class="edit-btn" onclick="">edit</button><br>
+                            Date of Birth:<input type="date" id="user-e-dob" disabled value=""><button class="edit-btn" onclick="">edit</button><br>
+                        </form>
+        </div>
+        
+        
+            <div class="add-article">
+                    
+                    <form class="article-form">
+                        <label for="blog-title">
+                            BLOG TITLE<br>
+                            <input type="text" id="blog-title"></label><br>
+                        <label for="msg-box">
+                            BLOG BODY<br>
+                            <textarea  id="msg-box"  rows="7"></textarea></label><br>
+                        <label for="msg-send"><input type="submit" id="add-blog" value="ADD BLOG"></label>
+                    </form>
+                
+                
+            </div><br>
+            <div class="articles">
+                <h2>Manage Articles</h2>
+                <table>
+                    <tr>
+                        <th>article title </th>
+                        <th>Time</th>
+                        <th>No. of comments</th>
+                        <th>Likes</th>
+                        <th>Manage</th>
+                    </tr>
+                    <tr>
+                        <td>article 1</td>
+                        <td>time</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>
+                            <select>
+                                <option>edit </option>
+                                <option>delete</option>
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>article 1</td>
+                        <td>time</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>
+                            <select>
+                                <option>edit </option>
+                                <option>delete</option>
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>article 1</td>
+                        <td>time</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>
+                            <select>
+                                <option>edit </option>
+                                <option>delete</option>
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>article 1</td>
+                        <td>time</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>
+                            <select>
+                                <option>edit </option>
+                                <option>delete</option>
+                                
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>article 1</td>
+                        <td>time</td>
+                        <td>00</td>
+                        <td>00</td>
+                        <td>
+                            <select>
+                                <option>edit </option>
+                                <option>delete</option>
+                                
+                            </select>
+                        </td>
+                    </tr>    
+                </table>
+
+
+            </div>
+        </div>
+        <footer>
+            <p class="div-3-text footer-text">Let me build the website you need.</p>
+            <ul class="footer-nav">
+                <a href="portfolio-page.html"><li class="footer-nav-btn footer-nav-btn-1">PORTFOLIO</li></a>
+                <a href="resume-page.html"><li class="footer-nav-btn">RESUME</li></a>
+                <a href="#"><li class="footer-nav-btn">ABOUT</li></a>
+                <a href="blog-page.html"><li class="footer-nav-btn">MY BLOG</li></a>
+                <a href="contact-page.html"><li class="footer-nav-btn">CONTACT</li></a>
+            </ul>
+            
+            <a href="#">
+                <div class="social-media-box facebook-box">
+                    <img src="./assets/images/Facebook.png" class="social-media-icons" alt="@herve_butera">
+                    <p class="social-media-usernames">Herve Butera</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="social-media-box">
+                    <img src="./assets/images/Instagram.png" class="social-media-icons" alt="@herve_butera">
+                    <p class="social-media-usernames">herve_butera</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="social-media-box">
+                    <img src="./assets/images/Twitter.png" class="social-media-icons" alt="@herve_butera">
+                    <p class="social-media-usernames">@someone</p>
+                </div>
+            </a>
+            <a href="#">
+                <div class="social-media-box">
+                    <img src="./assets/images/LinkedIn.png" class="social-media-icons" alt="@herve_butera">
+                    <p class="social-media-usernames">Herve Butera</p>
+                </div>    
+            </a>
+            <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
+        </footer> 
+    </body>
+</html>       

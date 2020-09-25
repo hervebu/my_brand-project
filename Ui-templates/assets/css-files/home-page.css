@@ -32,7 +32,11 @@ a {
     padding: 0 5px;
     margin:  5px 10px;
 }
+.nav-bar-ul-btns:hover {
+    color: rgba(238, 127, 23, 0.801);
+}
 .homepage-top-div {
+    background-size: 100% 90%;
     width: 100%;
     height: 600px;
     display:block;
