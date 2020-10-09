@@ -1,6 +1,13 @@
 .homepage-top-div {
     background: url("../images/blog-image.png");
 }
+.homepage-top-div-text {
+    
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    font-size: 50px;
+}
 .login-signup-form {
     display: inline-block;
     width: 30%;
@@ -12,7 +19,11 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .signup-box {
-    margin-left: 10%;
+    margin-left: 0;
+}
+.login-box {
+    margin-left: 0;
+    height: 40%;
 }
 form {
     font-size: 12px;
@@ -40,15 +51,18 @@ input {
     margin-right:0;
     height: 15px;
 }
-[type="submit"], [type="button"] {
+[type="submit"] {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
     width: 81%;
 }
-[type="submit"]:hover, [type="button"]:hover {
+[type="submit"]:hover {
     background-color: #EE7E17;
     color: #000000;
 }
-.login-box {
+.text-box {
+    background: none;
+    width: 45%;
     height: 40%;
+    float: left;
 }

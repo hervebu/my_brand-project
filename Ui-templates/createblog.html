@@ -1,67 +1,50 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contact me</title>
         <link rel="icon" href="./assets/images/Frame 3.png">
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/home-page.css">
-        <link  rel="stylesheet" type="text/css" href="./assets/css-files/contact-page.css">
+        <link  rel="stylesheet" type="text/css" href="./assets/css-files/admin-page.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        
-       
-        
-
+        <title>Create New Blog</title>
     </head>
     <body>
-        <div class="homepage-top-div ">
+        <div class="homepage-top-div" >
             <nav class="nav-bar" >
                 
                 <a href="index.html"><img class="mylogo" src="./assets/images/Frame 5.png"></a>
                 <ul class="nav-bar-ul">
-                    <a href="portfolio-page.html"><li class="nav-bar-ul-btns">PORTFOLIO</li></a>
-                    <a href="resume-page.html"><li class="nav-bar-ul-btns">RESUME</li></a>
-                    <a href="blog-page.html"><li class="nav-bar-ul-btns">MY BLOG</li></a>
-                    <a href="contact-page.html"><li class="nav-bar-ul-btns">CONTACT</li></a>
-                    
+                    <a href="admin-page.html"><li class="nav-bar-ul-btns">DASHBOARD</li></a>
+                    <a href="myprofile.html"><li class="nav-bar-ul-btns">MY PROFILE</li></a>
+                    <a href="#"><li class="nav-bar-ul-btns">ADD ARTICLE</li></a>
+                    <a href="#" id="logout-btn"><li class="nav-bar-ul-btns" >LOG OUT</li></a>
+                    <li class="user-icon"><img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/></li>
                 </ul>
-                
             </nav>
-        
-            <p class="homepage-top-div-text" >
-                Connect with me today.   
-            </p><br><br>
-            
-        </div>
-        <div id="blogs">
-            <h2 class="projects-heading">Feel free to send an email.</h2><br>
-            <form id="contact-form">
-                <label for="sender-name">
-                    Name*<br>
-                    <input type="text" id="sender-name" required></label><br>
-                <label for="sender-email">
-                    Email*<br>
-                    <input type="text" id="sender-email" required></label><br>
-                <label for="msg-subject">
-                    Subject*<br>
-                    <input type="text" id="msg-subject" required></label><br>    
-                <label for="msg-box">
-                    Your message<br>
-                    <textarea  id="msg-box"  rows="20" required></textarea></label><br>
-                <label for="msg-send"><input type="submit" id="msg-send" value="SEND MAIL"></label>
-            </form>
-            <h3 class="projects-heading call-heading">You can also call my number directly.</h3>
-            <h4 class="projects-heading call-number">+250 788-501-644.</h4>
-            <h5 class="projects-heading address-head">My Physical address</h3>
-            <h6 class="projects-heading call-number">KG 500 St</h4>
 
-        </div> 
+           <div class="add-article">
+                        <form id="article-form">
+                            <h1>Create a new blog</h1>
+                           <label for="blog-title">
+                               BLOG TITLE<br>
+                               <input type="text" id="blog-title" required></label><br>
+                           <label for="blog-body">
+                               BLOG BODY<br>
+                               <textarea  id="blog-body"  required></textarea></label><br>
+                            <label for="blog-cover">
+                                <input type="file" id="coverImageFile" ></label>   
+                           <label for="add-blog"><input type="submit" id="add-blog" value="ADD BLOG"></label>
+                       </form>
+                   
+               
+           </div>
+        </div>
         <footer>
             <p class="div-3-text footer-text">Let me build the website you need.</p>
             <ul class="footer-nav">
-                <a href="index.html"><li class="footer-nav-btn footer-nav-btn-1">HOME</li></a>
-                <a href="portfolio-page.html"><li class="footer-nav-btn">PORTFOLIO</li></a>
+                <a href="portfolio-page.html"><li class="footer-nav-btn footer-nav-btn-1">PORTFOLIO</li></a>
                 <a href="resume-page.html"><li class="footer-nav-btn">RESUME</li></a>
-                <a href="blog-page.html"><li class="footer-nav-btn">BLOG</li></a>
+                <a href="blog-page.html"><li class="footer-nav-btn">MY BLOG</li></a>
+                <a href="contact-page.html"><li class="footer-nav-btn">CONTACT</li></a>
             </ul>
             
             <a href="#">
@@ -89,10 +72,11 @@
                 </div>    
             </a>
             <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
-        </footer>
-                <!-- The core Firebase JS SDK is always required and must be listed first -->
+        </footer>            
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -114,10 +98,7 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-        </script>
-        <script src="../javascript-files/contact.js"></script>   
+        </script> 
+        <script src="../javascript-files/createblog.js"></script> 
     </body>
-    
-   
-
 </html>

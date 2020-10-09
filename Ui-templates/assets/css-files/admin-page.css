@@ -13,48 +13,126 @@
 }
 .nav-bar-ul-btns {
     color: #000000;
-    
-
 }
 .nav-bar-ul-btns:hover {
     color: #ffffff;
 }
+
 .user-icon {
    display: inline-block;
    text-decoration: none;
    padding-left: 20px;
     
 }
+.statistics {
+    display: block;
+    height: 20%;
+}
+.stat-box {
+    display: inline-block;
+    background-color:  #ffffffd8;
+    width: 15%;
+    margin: 3% 1%;
+    padding: 20px;
+    border-radius: 5px;
+}
+.stat-1 {
+    margin-left: 7%;
+}
+.stat-icon {
+    display: inline-block;
+    width: 30px;
+}
+.stat-head {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+.visits-num {
+    display: inline-block;
+    font-size: 25px;
+    margin-left: 50%;
+}
+.articles-msgs-div {
+    width: 100%;
+    height: 300px;
+}
+.articles-div, .msgs-div {
+    
+    background-color: #ffffffd8;
+    display: block;
+    padding: 2px;
+    border-radius: 2px;
+    margin:  0% 2% 0% 7%;
+    width: 80%;
+}
+.articles-div {
+    margin-top: 2%;
+}
+
+.msgs-div {
+    display: block;  
+}
+
+.signups-head {
+    display: block;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:  rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5% 5% 1%;
+}
 .profile-edit {
     display: inline-block;
-    margin: 0 2%;
+    margin: 5% 18%;
     background-color: #ffffffda;
-    width: 20%;
-    height: 300px;
+    width: 60%;
+    height: 450px;
     box-shadow: 1px 1px 7px 7px #0000002a;
     border-radius: 5px;
-    font-size: 10px;
+    font-size: 15px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-weight: bold;
-    padding: 10px 0 10px 15px;
+    padding: 5px 0 0px 10px;
+}
+.myprofile-pic {
+    width: 10%;
+    background-color: rgba(0, 0, 0, 0.404);
+    padding: 10px;
+    border-radius: 50%;
+    margin: 5% 45% 0;
+    position: center;
 }
 .profile-edit-heading {
     font-size: 15px;
-    margin: 10% 0 5%;
+    margin: 5% 30% 5%;
+}
+form {
+    margin-left: 20%;
 }
 input {
     width: 40%;
-    margin:2% 2% 2% 8%;
-    border: none;
+    margin:0% 2% 2% 8%;
+    border: 1px solid rgba(238, 127, 23, 0.801);
     background-color: #00000000;
 }
+
 [type="email"] {
-    margin-left: 16%;
+    margin-left: 13%;
+}
+#user-tel {
+    margin-left: 6.5%;
+}
+#full-name {
+    margin-left: 7.5%;
 }
 [type="date"] {
     width: 40%;
     margin-left: 4%;
-    margin-right: 1%;
+    margin-right: 2%;
 }
 .edit-btn {
     background-color: #00000000;
@@ -65,11 +143,24 @@ input {
 .edit-btn:hover {
     color: rgba(238, 127, 23, 0.801);
 }
-.add-article {
-    display: inline-block;
-    width: 60%;
-
+#save-btn {
+    background-color:  rgba(238, 127, 23, 0.801);
+    color: #000000;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    margin: 2% 20%;
+    padding: 5px;
+    width: 40%;
 }
+
+
+.add-blog-box {
+    color: rgba(0, 0, 0, 0.733);
+    font-weight: bolder;
+    font-size: 40px;
+}
+
 .articles {
     display: inline-block;
     background-color: #ffffffda;
@@ -84,16 +175,17 @@ input {
 table {
     border-collapse: collapse;
     font-size: 12px;
-    width: 80%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    width: 90%;
     text-align: left;
-    margin: 2% 5% 5%;
-    
+    margin: 2% 5% 5%;   
 }
 th {
     font-size: 13px;
 }
+
 th, td {
-    width: 3%;
+    width: 30px;
     border:none;
     border-bottom: 1px solid  rgba(238, 127, 23, 0.801);
     padding: 5px;
@@ -104,30 +196,40 @@ select {
     color: #EE7E17;
     outline: none;
 }
+.p-pic {
+    width: 20%;
+}
+
 h2 {
     font-size: 15px;
     margin: 5% 5% 0;
 }
-.article-form{
+.add-article {
     background-color: #ffffffda;
-    width: 100%;
-    height: 300px;
-    margin: 10% 0%;
+    display: block;
+    width: 90%;
+    margin: 5%;
+
+}
+#article-form{
+    background-color: #ffffffda;
+    margin: 5% 0%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 10px;
+    font-size: 13px;
     padding: 20px;
     
 }
 #blog-title {
-    width: 90%;
+    width: 100%;
     border: 1px solid #EE7E17;
-    margin: 0  0 5%;
-    height: 15px;
+    margin: 0  0 2%;
+    height: 20px;
     outline: none;
 }
 
-#msg-box {
-    width: 90%;
+#blog-body {
+    width: 100%;
+    height: 200px;
     border: 1px solid #EE7E17;
     margin: 0  0 5%;
     outline: none;
@@ -139,4 +241,43 @@ h2 {
     height: 30px;
     font-size: 15px;
 }
+.articles-statistics {
+    display: block;
+    width: 100%;
+    height: 30%;
+    
+}
+.article-stat-box {
+    background-color: #ffffffda;
+    display: inline-block;
+    margin: 0 2%;
+    width: 15%;
+    height: 90%;
+    padding: 10px;
+    border-radius: 2px;
+}
+.stat-art-img {
+    width: 100%;
+    height: 80%;
+}
 
+.stat-art-box-stats {
+    width: 100%;
+}
+.stats-box {
+    display: inline-block;
+    width: 30%;
+}
+.stat-art-box-icon {
+    display: inline-block;
+    margin-right: 2px;
+    width: 30%;
+}
+.stats1 {
+    margin-left: 6px;
+}
+.stat-art-box-num {
+    display:inline-block;
+    font-size: 15px;
+    
+}

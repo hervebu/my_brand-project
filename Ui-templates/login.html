@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Login.Sign Up</title>
+        <title>Member Login</title>
         <link rel="icon" href="./assets/images/Frame 3.png">
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/home-page.css">
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/login-signup.css">
@@ -15,36 +15,27 @@
                 <ul class="nav-bar-ul">
                     <a href="portfolio-page.html"><li class="nav-bar-ul-btns">PORTFOLIO</li></a>
                     <a href="resume-page.html"><li class="nav-bar-ul-btns">RESUME</li></a>
-                    <a href="#"><li class="nav-bar-ul-btns">ABOUT</li></a>
                     <a href="blog-page.html"><li class="nav-bar-ul-btns">MY BLOG</li></a>
                     <a href="contact-page.html"><li class="nav-bar-ul-btns">CONTACT</li></a>
                 </ul>
                 
             </nav>
-            <div class="login-signup-form signup-box">
-                
-                <form>
-                    <p class="signup-title"><strong>NEW? CREATE ACCOUNT</strong></p>
-                    <label for="name-input"><input type="text" id="name-input" placeholder="Enter your full name"></label><br>
-                    <label for="email-input"><input type="email" id="email-input" placeholder="Enter your email"></label><br>
-                    <label for="birthdate-input"><input type="date" id="birthdate-input">Date of Birth</label><br>
-                    <label for="phone-input"><input type="tel" id="phone-input" placeholder="Enter your phone"></label><br>
-                    <label for="password-input"><input type="password" id="password-input" placeholder="Create a password"></label><br>
-                    <label for="passconfirm-input"><input type="password" id="passconfirm-input" placeholder="Confirm your password"></label><br>
-                    <label for="admin-check"><input type="checkbox" id="admin-check">Administrator</label>
-                    <label for="guest-check"><input type="checkbox" id="guest-check">Guest User</label><br>
-                    <a href="admin-page.css"><label for="submit-btn"><input type="submit" id="submit-btn" onclick="" value="CREATE ACCOUNT"></label></a>
-                </form>
+            
+            <div class="login-signup-form text-box">
+                <p class="homepage-top-div-text" >
+                    Welcome back to the website.<br>    
+                </p><br>
+               
 
             </div>
             <div class="login-signup-form login-box">
                 
-                <form>
-                    <p class="signup-title"><strong>ALREADY A USER? LOGIN</strong></p>
-                    <label for="login-username"><input type="text" id="login-username" placeholder="user-name"></label><br>
-                    <label for="login-password"><input type="password" id="login-password" placeholder="Enter password"></label><br>
+                <form id="login-form">
+                    <p class="signup-title"><strong>MEMBER LOGIN</strong></p>
+                    <label for="login-username"><input type="email" id="login-userEmail" placeholder="Enter your email" required></label><br>
+                    <label for="login-password"><input type="password" id="login-password" placeholder="Enter password" required></label><br>
                     
-                    <a href="admin-page.html"><label for="login-btn"><input type="button" id="login-btn" value="LOGIN"></label></a>
+                    <label for="login-btn"><input type="submit" id="login-btn" value="LOGIN"></label>
                 </form>
 
             </div>
@@ -55,7 +46,6 @@
             <ul class="footer-nav">
                 <a href="index.html"><li class="footer-nav-btn footer-nav-btn-1">HOME</li></a>
                 <a href="resume-page.html"><li class="footer-nav-btn">RESUME</li></a>
-                <a href="#"><li class="footer-nav-btn">ABOUT</li></a>
                 <a href="blog-page.html"><li class="footer-nav-btn">MY BLOG</li></a>
                 <a href="contact-page.html"><li class="footer-nav-btn">CONTACT</li></a>
             </ul>
@@ -86,6 +76,33 @@
             </a>
             <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
         </footer>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBw21qmuq6uAVVoC0oBpYdv-2kTBv2XUI0",
+            authDomain: "my-website-8c2f4.firebaseapp.com",
+            databaseURL: "https://my-website-8c2f4.firebaseio.com",
+            projectId: "my-website-8c2f4",
+            storageBucket: "my-website-8c2f4.appspot.com",
+            messagingSenderId: "805889633533",
+            appId: "1:805889633533:web:44ce7427d802d321526294",
+            measurementId: "G-H88NS0F43W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script> 
+        <script src="../javascript-files/login.js"></script>        
     </body>
 </html>
 
