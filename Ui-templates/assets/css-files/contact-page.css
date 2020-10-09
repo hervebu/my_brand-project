@@ -7,17 +7,17 @@
     background-color: #0000007e;
 }
 .nav-bar {
-    background-color: rgba(0, 0, 0, 0);
+    background-color:  rgba(0, 0, 0, 0.651);
 }
 .nav-bar-ul-btns {
-    color: #EE7E17;
+    color: #ffffff;
 }
 .nav-bar-ul-btns:hover {
-    color: #ffffff;
+    color: #EE7E17;
 }
 
 #blogs {
-    height: 1300px;
+    height: 1400px;
 }
 .homepage-top-div-text {
     color: rgb(255, 255, 255);

@@ -2,7 +2,7 @@
     background-color: rgba(0, 0, 0, 0.897);
 }
 .nav-bar-ul-btns {
-    color: #000000;
+    color: #ffffff;
 }
 .homepage-top-div-text {
     font-size: 60px;
@@ -10,15 +10,16 @@
 
 .second-div {
     height: 400px;
+    color: #000000;
 }
 .second-div-heading {
-    color: black;
     font-size: 40px;
+    color: rgb(0, 0, 0);
     margin: 7% 18% 0;
 }
 .second-div-text {
     margin: 3% 18% 4%;
-    color: black;
+    color: #000000;
     font-size: 20px;
 }
 .portfolio-proj-div {
