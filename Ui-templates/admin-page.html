@@ -5,7 +5,7 @@
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/home-page.css">
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/admin-page.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <title>Manage your blog</title>
+        <title>Manage Your web</title>
     </head>
     <body>
 
@@ -14,127 +14,73 @@
                 
                 <a href="index.html"><img class="mylogo" src="./assets/images/Frame 5.png"></a>
                 <ul class="nav-bar-ul">
-                    <a href="portfolio-page.html"><li class="nav-bar-ul-btns">PORTFOLIO</li></a>
-                    <a href="resume-page.html"><li class="nav-bar-ul-btns">RESUME</li></a>
-                    <a href=""><li class="nav-bar-ul-btns">ABOUT</li></a>
-                    <a href="blog-page.html"><li class="nav-bar-ul-btns">MY BLOG</li></a>
-                    <a href="contact-page.html"><li class="nav-bar-ul-btns">CONTACT</li></a>
-                    <li class="user-icon"><img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/></li>
+                    <a href="admin-page.html"><li class="nav-bar-ul-btns">DASHBOARD</li></a>
+                    <a href="myprofile.html"><li class="nav-bar-ul-btns">MY PROFILE</li></a>
+                    <a href="createblog.html"><li class="nav-bar-ul-btns">ADD ARTICLE</li></a>
+                    <a href="#" id="logout-btn"><li class="nav-bar-ul-btns" >LOG OUT</li></a>
+                    
                 </ul>
                 
             </nav>
-         <div class="profile-edit">
-                        <form action="">
-                            <h1 class="profile-edit-heading">My Profile</h1>
-                            User name:<input type="text" id="user-name" disabled value="user name"><button class="edit-btn" onclick="">edit</button><br>
-                            Full name:<input type="text" id="full-name" disabled value="user full name"><button class="edit-btn" onclick="">edit</button><br>
-                            Email:<input type="email" id="user-e-email" disabled value="user email"><button class="edit-btn" onclick="">edit</button><br>
-                            Password:<input type="password" id="user-e-passw" disabled value="my password"><button class="edit-btn" onclick="">edit</button><br>
-                            Date of Birth:<input type="date" id="user-e-dob" disabled value=""><button class="edit-btn" onclick="">edit</button><br>
-                        </form>
-        </div>
+         
         
-        
-            <div class="add-article">
-                    
-                    <form class="article-form">
-                        <label for="blog-title">
-                            BLOG TITLE<br>
-                            <input type="text" id="blog-title"></label><br>
-                        <label for="msg-box">
-                            BLOG BODY<br>
-                            <textarea  id="msg-box"  rows="7"></textarea></label><br>
-                        <label for="msg-send"><input type="submit" id="add-blog" value="ADD BLOG"></label>
-                    </form>
-                
-                
-            </div><br>
-            <div class="articles">
-                <h2>Manage Articles</h2>
-                <table>
-                    <tr>
-                        <th>article title </th>
-                        <th>Time</th>
-                        <th>No. of comments</th>
-                        <th>Likes</th>
-                        <th>Manage</th>
-                    </tr>
-                    <tr>
-                        <td>article 1</td>
-                        <td>time</td>
-                        <td>00</td>
-                        <td>00</td>
-                        <td>
-                            <select>
-                                <option>edit </option>
-                                <option>delete</option>
-                                
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>article 1</td>
-                        <td>time</td>
-                        <td>00</td>
-                        <td>00</td>
-                        <td>
-                            <select>
-                                <option>edit </option>
-                                <option>delete</option>
-                                
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>article 1</td>
-                        <td>time</td>
-                        <td>00</td>
-                        <td>00</td>
-                        <td>
-                            <select>
-                                <option>edit </option>
-                                <option>delete</option>
-                                
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>article 1</td>
-                        <td>time</td>
-                        <td>00</td>
-                        <td>00</td>
-                        <td>
-                            <select>
-                                <option>edit </option>
-                                <option>delete</option>
-                                
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>article 1</td>
-                        <td>time</td>
-                        <td>00</td>
-                        <td>00</td>
-                        <td>
-                            <select>
-                                <option>edit </option>
-                                <option>delete</option>
-                                
-                            </select>
-                        </td>
-                    </tr>    
-                </table>
 
-
+            <div class="statistics">
+                 <div class="stat-box stat-1">
+                     <span class="stat-head">Total visits</span>
+                     <img class="stat-icon" src="./assets/images/visit.png" alt=""><span class="visits-num">50</span>
+                 </div> 
+                 <div class="stat-box stat-2">
+                    <span class="stat-head">Blog views</span>
+                    <img class="stat-icon" src="./assets/images/view.png" alt=""> <span class="visits-num">50</span>
+                 </div>
+                 <div class="stat-box stat-3">
+                    <span class="stat-head">Blog Likes</span>
+                    <img class="stat-icon" src="./assets/images/heart.png" alt=""><span class="visits-num">50</span>
+                 </div>
+                 <div class="stat-box stat-4">
+                    <span class="stat-head">Blog Comments</span>
+                    <img class="stat-icon" src="./assets/images/comments.png" alt=""><span class="visits-num">50</span>
+                 </div>  
+                
             </div>
+            <div class="articles-msgs-div">
+                <div class="msgs-div">
+                    <span class="signups-head msgs-table">Recent Messages</span>
+                    <table id="msgs-table">
+                        <tr> <th>Name</th>
+                             <th>subject</th>
+                             <th>message</th>
+                             <th>Email</th>
+                        </tr>
+                        
+                            
+                     </table>
+                </div>
+                
+                
+            </div>
+            <div class="articles-div">
+                <span class="signups-head">Articles</span>
+                <table id="articles-table">
+                    <tr>
+                        <th >Article title </th>
+                        <th>Date & Time</th>
+                         <th>Manage</th>
+                    </tr>
+                    
+                   
+                     
+                </table>  
+            </div>
+            
+            
         </div>
         <footer>
             <p class="div-3-text footer-text">Let me build the website you need.</p>
             <ul class="footer-nav">
                 <a href="portfolio-page.html"><li class="footer-nav-btn footer-nav-btn-1">PORTFOLIO</li></a>
                 <a href="resume-page.html"><li class="footer-nav-btn">RESUME</li></a>
-                <a href="#"><li class="footer-nav-btn">ABOUT</li></a>
                 <a href="blog-page.html"><li class="footer-nav-btn">MY BLOG</li></a>
                 <a href="contact-page.html"><li class="footer-nav-btn">CONTACT</li></a>
             </ul>
@@ -164,6 +110,34 @@
                 </div>    
             </a>
             <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
-        </footer> 
+        </footer>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
+
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
+
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBw21qmuq6uAVVoC0oBpYdv-2kTBv2XUI0",
+            authDomain: "my-website-8c2f4.firebaseapp.com",
+            databaseURL: "https://my-website-8c2f4.firebaseio.com",
+            projectId: "my-website-8c2f4",
+            storageBucket: "my-website-8c2f4.appspot.com",
+            messagingSenderId: "805889633533",
+            appId: "1:805889633533:web:44ce7427d802d321526294",
+            measurementId: "G-H88NS0F43W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        </script> 
+        <script src="../javascript-files/admin-page.js"></script>          
     </body>
-</html>       
+</html>   
+    

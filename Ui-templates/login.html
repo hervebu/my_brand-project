@@ -1,19 +1,14 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Contact me</title>
+        <title>Member Login</title>
         <link rel="icon" href="./assets/images/Frame 3.png">
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/home-page.css">
-        <link  rel="stylesheet" type="text/css" href="./assets/css-files/contact-page.css">
+        <link  rel="stylesheet" type="text/css" href="./assets/css-files/login-signup.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        
-       
-        
-
     </head>
     <body>
-        <div class="homepage-top-div ">
+        <div class="homepage-top-div" >
             <nav class="nav-bar" >
                 
                 <a href="index.html"><img class="mylogo" src="./assets/images/Frame 5.png"></a>
@@ -22,46 +17,37 @@
                     <a href="resume-page.html"><li class="nav-bar-ul-btns">RESUME</li></a>
                     <a href="blog-page.html"><li class="nav-bar-ul-btns">MY BLOG</li></a>
                     <a href="contact-page.html"><li class="nav-bar-ul-btns">CONTACT</li></a>
-                    
                 </ul>
                 
             </nav>
-        
-            <p class="homepage-top-div-text" >
-                Connect with me today.   
-            </p><br><br>
             
-        </div>
-        <div id="blogs">
-            <h2 class="projects-heading">Feel free to send an email.</h2><br>
-            <form id="contact-form">
-                <label for="sender-name">
-                    Name*<br>
-                    <input type="text" id="sender-name" required></label><br>
-                <label for="sender-email">
-                    Email*<br>
-                    <input type="text" id="sender-email" required></label><br>
-                <label for="msg-subject">
-                    Subject*<br>
-                    <input type="text" id="msg-subject" required></label><br>    
-                <label for="msg-box">
-                    Your message<br>
-                    <textarea  id="msg-box"  rows="20" required></textarea></label><br>
-                <label for="msg-send"><input type="submit" id="msg-send" value="SEND MAIL"></label>
-            </form>
-            <h3 class="projects-heading call-heading">You can also call my number directly.</h3>
-            <h4 class="projects-heading call-number">+250 788-501-644.</h4>
-            <h5 class="projects-heading address-head">My Physical address</h3>
-            <h6 class="projects-heading call-number">KG 500 St</h4>
+            <div class="login-signup-form text-box">
+                <p class="homepage-top-div-text" >
+                    Welcome back to the website.<br>    
+                </p><br>
+               
 
-        </div> 
+            </div>
+            <div class="login-signup-form login-box">
+                
+                <form id="login-form">
+                    <p class="signup-title"><strong>MEMBER LOGIN</strong></p>
+                    <label for="login-username"><input type="email" id="login-userEmail" placeholder="Enter your email" required></label><br>
+                    <label for="login-password"><input type="password" id="login-password" placeholder="Enter password" required></label><br>
+                    
+                    <label for="login-btn"><input type="submit" id="login-btn" value="LOGIN"></label>
+                </form>
+
+            </div>
+
+        </div>
         <footer>
             <p class="div-3-text footer-text">Let me build the website you need.</p>
             <ul class="footer-nav">
                 <a href="index.html"><li class="footer-nav-btn footer-nav-btn-1">HOME</li></a>
-                <a href="portfolio-page.html"><li class="footer-nav-btn">PORTFOLIO</li></a>
                 <a href="resume-page.html"><li class="footer-nav-btn">RESUME</li></a>
-                <a href="blog-page.html"><li class="footer-nav-btn">BLOG</li></a>
+                <a href="blog-page.html"><li class="footer-nav-btn">MY BLOG</li></a>
+                <a href="contact-page.html"><li class="footer-nav-btn">CONTACT</li></a>
             </ul>
             
             <a href="#">
@@ -90,9 +76,10 @@
             </a>
             <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
         </footer>
-                <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
 
         <!-- TODO: Add SDKs for Firebase products that you want to use
             https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -114,10 +101,8 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-        </script>
-        <script src="../javascript-files/contact.js"></script>   
+        </script> 
+        <script src="../javascript-files/login.js"></script>        
     </body>
-    
-   
-
 </html>
+
