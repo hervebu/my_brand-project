@@ -1,100 +1,107 @@
 
-var addArticleForm = document.getElementById('article-form');
-addArticleForm.addEventListener("submit",submitFun);
+const token1 = localStorage.getItem('token')
+if (!token1) {
+    alert('You have to login to continue')
+    window.location.assign('../Ui-templates/login.html')
+  } else {
 //displaying articles into a table as a list
-var referenceToArticles = firebase.database().ref('articles');
-var articleId = 0;
-referenceToArticles.once('value',getArticles);
+   
+    fetch(
+        'https://hervebu.herokuapp.com/articles',
+        {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json, */*',
+            'auth_token': token1
+          }
+        }
+      ).then(res => res.json())
+      .then(articles => {
+        for (let count = 0; count < articles.data.length; count++){ 
+            let titleOfArticle = articles.data[count].title
+            let blogContent = articles.data[count].body
+            
+            
+            let articlesTable = document.getElementById('articles-table');
+            articlesTable.innerHTML += `<tr><td>${articles.data[count].title}</td>
+            <td>${articles.data[count].date}</td><td><input type='button' value='edit'`
+                +` onclick="editArticle('${titleOfArticle}','${blogContent}','${articles.data[count]._id}')"><input
+                    type='button' value='delete' onclick="removeArticle('${count}','${articles.data[count]._id}');">
+                    </td></tr>`;  
 
-function getArticles(snapshot) {
-    var articles = snapshot.val();
-    var keys = Object.keys(articles);
-    console.log(articles);
-    
-    for (var cont = 0; cont <= keys.length; cont++){ 
-        var titleOfArticle = articles[keys[cont]].Title;
-        var blogContent = articles[keys[cont]].blogContent;
-        var timeOfCreation = articles[keys[cont]].timeCreated;
+            
+                 
+        }
         
-        articleId = cont + 1;
-        var articlesTable = document.getElementById('articles-table');
-        articlesTable.innerHTML += `<tr id ="row-${cont}"><td>${titleOfArticle}</td>
-        <td>${timeOfCreation}</td>
-                <td><input type='button' value='edit' 
-                onclick="editArticle(${titleOfArticle},${blogContent},${addArticleForm},${articleId});"><input type='button' value='delete' 
-                onclick="removeArticle(${cont},${articleId});">
-                </td></tr>`;        
-    }
-    
-}
+      })
+      .catch(err => {
+            alert('An error occurred while retrieving articles.')
+            console.log(err)
+        })
+ 
+
 
 // function to delete an article from the database and the table
-function removeArticle (cont,articleId) {
-  referenceToArticles.child(articleId).remove();
-  document.getElementById('articles-table').deleteRow(cont+1);
-}
-
-function editArticle (titleOfArticle,blogContent,addArticleForm,articleId) {
-    var newArticleTitle = document.getElementById('blog-title').value;
-    var newArticleContent = document.getElementById('blog-body').value;
-    var dateAndTimeUpdated = `${new Date().getDate()}/${new Date().getMonth() + 1}` 
-           + `/${new Date().getFullYear()}  ${new Date().getHours()}:${new Date().getMinutes()}`;
+const removeArticle = (count,id) => {
+    let httpVal = 'https://hervebu.herokuapp.com/articles/' + id
+    fetch(
+       httpVal,
+    {
+      method: 'DELETE',
+      headers: {
+        'Accept': 'application/json, */*',
+        'auth_token': token1
+      }
+    }).then(res => res.json())
+    .then(display => {
+       document.getElementById('articles-table').deleteRow(count+1)
+    })
+    .catch(err => {
+      alert('Unable to delete the  article')
+      console.log(err)})
+   
     
-    newArticleTitle = titleOfArticle;
-    newArticleContent = blogContent;
-    addArticleForm.addEventListener("submit",upDateArticleFunc);
-    function upDateArticleFunc (e) {
-        e.preventDefault();
-        var articlesDatabase = firebase.database().ref('articles');
-      
-        upDateArticle(newArticleTitle,newArticleContent,dateAndTimeUpdated,articleId);
-        addArticleForm.reset();
-        alert(`The blog "${articleTitle}" has been created.`);
-                    
-        function upDateArticle (newArticleTitle,newArticleContent,dateAndTimeUpdated,articleId) {
-            articlesDatabase.child(articleId).update({
-                   Title:newArticleTitle,
-                   blogContent:newArticleContent,
-                   timeCreated:dateAndTimeUpdated   
-                });
-        }    
-      
-    } 
+  }
+
+
+function editArticle (titleOfArticle,blogContent,id) {
+    let newArticleTitle = document.getElementById('blog-title')
+    let newArticleContent = document.getElementById('blog-body')
+    let httpVal = 'https://hervebu.herokuapp.com/articles/' + id
+
+    newArticleTitle.value = titleOfArticle;
+    newArticleContent.value = blogContent;
+    
+    fetch(httpVal,
+        {
+          method: 'PUT',
+          headers: {
+            'Accept': 'application/json, */*',
+            'content-type': 'application/json',
+            'auth_token': token1
+          },
+          body: JSON.stringify({
+            title: newArticleTitle.value,
+            body: newArticleContent.value,
+            coverImgUrl: password.value
+          })
+        }
+        ).then(res => res.json())
+        .then(response => {
+          alert(response.message)
+          window.location.assign('../Ui-templates/admin-page.html')
+        }).catch(err => {
+            console.log(err)
+            alert('Unable to update your user information, something went wrong.') 
+        })
+
     }
 
-    function submitFun(e) {
-        e.preventDefault();
-        var articlesDatabase = firebase.database().ref('articles');
-        articlesDatabase.once('value', function (snapshot) {
-            if (snapshot.exists()) {
-                var articleTotalNum = snapshot.numChildren();
-            }else {
-                articleTotalNum = 0;
-            }
-            var articleTitle = document.getElementById('blog-title').value;
-            var articleContent = document.getElementById('blog-body').value;
-            var dateAndTimeCreated = `${new Date().getDate()}/${new Date().getMonth() + 1}` 
-               + `/${new Date().getFullYear()}  ${new Date().getHours()}:${new Date().getMinutes()}`;
-                    
-            saveArticle(articleTotalNum,articleTitle,articleContent,dateAndTimeCreated);
-            addArticleForm.reset();
-            alert(`The blog "${articleTitle}" has been created.`);
-                    
-            function saveArticle (articleTotalNum,articleTitle,articleContent,dateAndTimeCreated) {
-                articlesDatabase.child(articleTotalNum + 1).set({
-                       Title:articleTitle,
-                       blogContent:articleContent,
-                       timeCreated:dateAndTimeCreated   
-                    });
-            }    
-     }); 
-    } 
     document.getElementById('logout-btn').addEventListener('click',logoutFun);
 
-function logoutFun() {
-    firebase.auth().signOut().then(function() {
-      window.location.replace("login.html");
-       }).catch(function(error) {
-        // An error happened.
-        });   
-}
+    function logoutFun() {
+        localStorage.removeItem('token')
+        localStorage.removeItem('currentVal')
+         window.location.replace("login.html")  
+    }
+  }    
