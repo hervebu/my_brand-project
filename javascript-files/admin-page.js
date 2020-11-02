@@ -77,8 +77,9 @@ if (!token1) {
         'auth_token': token1
     }
     }).then(res => res.json())
-    .then(display => {
+    .then(() => {
     document.getElementById('articles-table').deleteRow(count+1)
+    alert('Article successfully deleted')
     })
     .catch(err => {
     alert('Unable to delete the  article')
