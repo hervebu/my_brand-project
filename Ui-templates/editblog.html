@@ -21,9 +21,11 @@
                     <a href="admin-page.html"><li class="nav-bar-ul-btns">DASHBOARD</li></a>
                     <a href="myprofile.html"><li class="nav-bar-ul-btns">MY PROFILE</li></a>
                     <a href="createblog.html"><li class="nav-bar-ul-btns">ADD ARTICLE</li></a>
-                    <a href="#"><li class="nav-bar-ul-btns">EDIT ARTICLES</li></a>
+                    <a href="editblog.html"><li class="nav-bar-ul-btns">EDIT ARTICLES</li></a>
                     <a href="#" id="logout-btn"><li class="nav-bar-ul-btns" >LOG OUT</li></a>
-                    <li class="user-icon"><img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/></li>
+                    <li class="user-icon">
+                        <img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/>
+                    </li>
                 </ul>
             </nav>
             <div class="articles-div">
@@ -44,13 +46,14 @@
                             <h1 id="article-form-title">Edit your article</h1>
                            <label for="blog-title">
                                BLOG TITLE<br>
-                               <input type="text" id="blog-title" required></label><br>
+                               <input type="text" id="blog-title" ></label><br>
                            <label for="blog-body">
                                BLOG BODY<br>
-                               <textarea  id="blog-body"  required></textarea></label><br>
+                               <textarea  id="blog-body" ></textarea></label><br>
                             <label for="blog-cover">
-                                <input type="file" id="coverImageFile" ></label>   
-                           <label for="add-blog"><input type="submit" id="add-blog" value="ADD BLOG"></label>
+                               Cover Imge Url<br> 
+                                <input type="text" id="coverImageFile"  required></label>   
+                           <label for="add-blog"><input type="submit" id="add-blog" value="SAVE UPDATES"></label>
                        </form>
                    
                
@@ -89,34 +92,10 @@
                     <p class="social-media-usernames">Herve Butera</p>
                 </div>    
             </a>
-            <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
-        </footer>            
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
-
-        <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyBw21qmuq6uAVVoC0oBpYdv-2kTBv2XUI0",
-            authDomain: "my-website-8c2f4.firebaseapp.com",
-            databaseURL: "https://my-website-8c2f4.firebaseio.com",
-            projectId: "my-website-8c2f4",
-            storageBucket: "my-website-8c2f4.appspot.com",
-            messagingSenderId: "805889633533",
-            appId: "1:805889633533:web:44ce7427d802d321526294",
-            measurementId: "G-H88NS0F43W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        </script> 
+            <p class="footer-copyright-text">
+                &copy 2020 Herve Butera, the software developer. All rights reserved.
+            </p>
+        </footer>             
         <script src="../javascript-files/editblog.js"></script> 
     </body>
 </html>
