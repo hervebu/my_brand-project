@@ -45,7 +45,9 @@
 }
 .stat-head {
     display: block;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+     Verdana, sans-serif;
     color:  rgb(0, 0, 0);
     font-size: 20px;
     font-weight: bold;
@@ -79,7 +81,9 @@
 
 .signups-head {
     display: block;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+      Verdana, sans-serif;
     color:  rgb(0, 0, 0);
     font-size: 16px;
     font-weight: bold;
@@ -94,7 +98,9 @@
     box-shadow: 1px 1px 7px 7px #0000002a;
     border-radius: 5px;
     font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+      Verdana, sans-serif;
     font-weight: bold;
     padding: 5px 0 0px 10px;
 }
@@ -123,26 +129,11 @@ input {
 [type="email"] {
     margin-left: 13%;
 }
-#user-tel {
-    margin-left: 6.5%;
-}
+
 #full-name {
     margin-left: 7.5%;
 }
-[type="date"] {
-    width: 40%;
-    margin-left: 4%;
-    margin-right: 2%;
-}
-.edit-btn {
-    background-color: #00000000;
-    color: #00000088;
-    border: none;
-    outline: none;
-}
-.edit-btn:hover {
-    color: rgba(238, 127, 23, 0.801);
-}
+
 #save-btn {
     background-color:  rgba(238, 127, 23, 0.801);
     color: #000000;
@@ -168,14 +159,18 @@ input {
     
     margin: 2% 10%;
     font-size: 15px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode',
+      Geneva, Verdana, sans-serif;
     border-radius: 5px;
     box-shadow: 1px 1px 7px 7px #0000002a;
 }
 table {
     border-collapse: collapse;
     font-size: 12px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+      Verdana, sans-serif;
     width: 90%;
     text-align: left;
     margin: 2% 5% 5%;   
@@ -185,16 +180,19 @@ th {
 }
 
 th, td {
-    width: 30px;
+    width: 60px;
     border:none;
     border-bottom: 1px solid  rgba(238, 127, 23, 0.801);
     padding: 5px;
 }
-select {
-    border: none;
-    background-color: #00000000;
-    color: #EE7E17;
-    outline: none;
+#title-td {
+   width: 40%; 
+}
+#name-td {
+    width: 30%;
+}
+#message-td {
+    width: 40%;
 }
 .p-pic {
     width: 20%;
@@ -214,12 +212,14 @@ h2 {
 #article-form{
     background-color: #ffffffda;
     margin: 5% 0%;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+      Verdana, sans-serif;
     font-size: 13px;
     padding: 20px;
     
 }
-#blog-title {
+#blog-title, #coverImageFile {
     width: 100%;
     border: 1px solid #EE7E17;
     margin: 0  0 2%;

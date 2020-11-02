@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +5,12 @@
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/home-page.css">
         <link  rel="stylesheet" type="text/css" href="./assets/css-files/admin-page.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <title>My profile</title>
+        <title>Edit articles</title>
+    <style>
+        .homepage-top-div {
+            height: 1000px;
+        }
+    </style>
     </head>
     <body>
         <div class="homepage-top-div" >
@@ -18,29 +22,49 @@
                     <a href="myprofile.html"><li class="nav-bar-ul-btns">MY PROFILE</li></a>
                     <a href="createblog.html"><li class="nav-bar-ul-btns">ADD ARTICLE</li></a>
                     <a href="editblog.html"><li class="nav-bar-ul-btns">EDIT ARTICLES</li></a>
-                    <a href="#" id="logout-btn"><li class="nav-bar-ul-btns">LOG OUT</li></a>
-                    <li class="user-icon"><img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/></li>
+                    <a href="#" id="logout-btn"><li class="nav-bar-ul-btns" >LOG OUT</li></a>
+                    <li class="user-icon">
+                        <img src="https://img.icons8.com/windows/20/000000/system-administrator-male.png"/>
+                    </li>
                 </ul>
-                
             </nav>
-            <div class="profile-edit">
-                <img class="myprofile-pic" src="./assets/images/user.png" alt="">
-                <form id="profile-Info-form">
-                    <h1 class="profile-edit-heading">My Profile (Admin)</h1>
-                    Full name:<input type="text" id="full-name" required placeholder="user full name"> <br>
-                    Email:<input type="email" id="user-e-email" required placeholder="user email"><br>
-                    Password:<input type="password" id="user-e-passw" required placeholder="Enter a new password"><br>
-                    <input type="button" id="save-btn" value="UPDATE">
-                </form>
-                
+            <div class="articles-div">
+                <span class="signups-head">Articles</span>
+                <table id="articles-table">
+                    <tr>
+                        <th >Article title </th>
+                        <th>Date & Time</th>
+                         <th>Manage</th>
+                    </tr>
+                    
+                   
+                     
+                </table>  
             </div>
-        </div>    
+           <div class="add-article">
+                        <form id="article-form">
+                            <h1 id="article-form-title">Edit your article</h1>
+                           <label for="blog-title">
+                               BLOG TITLE<br>
+                               <input type="text" id="blog-title" ></label><br>
+                           <label for="blog-body">
+                               BLOG BODY<br>
+                               <textarea  id="blog-body" ></textarea></label><br>
+                            <label for="blog-cover">
+                               Cover Imge Url<br> 
+                                <input type="text" id="coverImageFile"  required></label>   
+                           <label for="add-blog"><input type="submit" id="add-blog" value="SAVE UPDATES"></label>
+                       </form>
+                   
+               
+           </div>
+        </div>
         <footer>
             <p class="div-3-text footer-text">Let me build the website you need.</p>
             <ul class="footer-nav">
                 <a href="portfolio-page.html"><li class="footer-nav-btn footer-nav-btn-1">PORTFOLIO</li></a>
                 <a href="resume-page.html"><li class="footer-nav-btn">RESUME</li></a>
-                <a href="#"><li class="footer-nav-btn">ADD ARTICLE</li></a>
+                <a href="blog-page.html"><li class="footer-nav-btn">MY BLOG</li></a>
                 <a href="contact-page.html"><li class="footer-nav-btn">CONTACT</li></a>
             </ul>
             
@@ -68,8 +92,10 @@
                     <p class="social-media-usernames">Herve Butera</p>
                 </div>    
             </a>
-            <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
-        </footer>
-        <script src="../javascript-files/myprofilepage.js"></script>          
+            <p class="footer-copyright-text">
+                &copy 2020 Herve Butera, the software developer. All rights reserved.
+            </p>
+        </footer>             
+        <script src="../javascript-files/editblog.js"></script> 
     </body>
 </html>
