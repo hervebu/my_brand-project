@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,12 +27,10 @@
                 <img class="myprofile-pic" src="./assets/images/user.png" alt="">
                 <form id="profile-Info-form">
                     <h1 class="profile-edit-heading">My Profile (Admin)</h1>
-                    Full name:<input type="text" id="full-name"  placeholder="user full name"> <br>
+                    Full name:<input type="text" id="full-name" required placeholder="user full name"> <br>
                     Email:<input type="email" id="user-e-email" required placeholder="user email"><br>
-                    Password:<input type="password" id="user-e-passw"  placeholder="my password"><br>
-                    Date of Birth:<input type="date" id="user-e-dob" ><br>
-                    Telephone:<input type="tel" id="user-tel"  placeholder="phone number"><br>
-                    <input type="button" id="save-btn" value="SAVE">
+                    Password:<input type="password" id="user-e-passw" required placeholder="Enter a new password"><br>
+                    <input type="button" id="save-btn" value="UPDATE">
                 </form>
                 
             </div>
@@ -71,32 +70,6 @@
             </a>
             <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
         </footer>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
-
-        <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyBw21qmuq6uAVVoC0oBpYdv-2kTBv2XUI0",
-            authDomain: "my-website-8c2f4.firebaseapp.com",
-            databaseURL: "https://my-website-8c2f4.firebaseio.com",
-            projectId: "my-website-8c2f4",
-            storageBucket: "my-website-8c2f4.appspot.com",
-            messagingSenderId: "805889633533",
-            appId: "1:805889633533:web:44ce7427d802d321526294",
-            measurementId: "G-H88NS0F43W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        </script> 
         <script src="../javascript-files/myprofilepage.js"></script>          
     </body>
 </html>
