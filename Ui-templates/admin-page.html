@@ -22,9 +22,7 @@
                     
                 </ul>
                 
-            </nav>
-         
-        
+            </nav>     
 
             <div class="statistics">
                  <div class="stat-box stat-1">
@@ -49,23 +47,19 @@
                 <div class="msgs-div">
                     <span class="signups-head msgs-table">Recent Messages</span>
                     <table id="msgs-table">
-                        <tr> <th>Name</th>
-                             <th>subject</th>
-                             <th>message</th>
+                        <tr> <th id="name-td">Name</th>
+                             <th id="message-td">message</th>
                              <th>Email</th>
                         </tr>
-                        
                             
-                     </table>
+                    </table>
                 </div>
-                
-                
             </div>
             <div class="articles-div">
                 <span class="signups-head">Articles</span>
                 <table id="articles-table">
                     <tr>
-                        <th >Article title </th>
+                        <th id="title-td">Article title </th>
                         <th>Date & Time</th>
                          <th>Manage</th>
                     </tr>
@@ -112,32 +106,6 @@
             </a>
             <p class="footer-copyright-text">&copy 2020 Herve Butera, the software developer. All rights reserved.</p>
         </footer>
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-auth.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-            https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.22.1/firebase-analytics.js"></script>
-
-        <script>
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        var firebaseConfig = {
-            apiKey: "AIzaSyBw21qmuq6uAVVoC0oBpYdv-2kTBv2XUI0",
-            authDomain: "my-website-8c2f4.firebaseapp.com",
-            databaseURL: "https://my-website-8c2f4.firebaseio.com",
-            projectId: "my-website-8c2f4",
-            storageBucket: "my-website-8c2f4.appspot.com",
-            messagingSenderId: "805889633533",
-            appId: "1:805889633533:web:44ce7427d802d321526294",
-            measurementId: "G-H88NS0F43W"
-        };
-        // Initialize Firebase
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        </script> 
         <script src="../javascript-files/admin-page.js"></script>          
     </body>
 </html>   
