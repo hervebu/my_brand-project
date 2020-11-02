@@ -4,6 +4,8 @@ if (!token1) {
   alert('You have to login to continue')
   window.location.assign('../Ui-templates/login.html')
 } else {
+
+  //Function to get user's location
   function getUserCurrentLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function () {
@@ -17,6 +19,7 @@ if (!token1) {
   }
   getUserCurrentLocation();
   
+  //Function to get queries/messages listed in a table
   fetch(
     'https://hervebu.herokuapp.com/query',
     {
@@ -42,48 +45,44 @@ if (!token1) {
     {
       method: 'GET',
       headers: {
-        'Accept': 'application/json, */*',
-        'auth_token': token1
+        'Accept': 'application/json, */*'
       }
     }
   ).then(res => res.json())
-  .then(articles => displayArticlesInTable(articles))
+  .then(articles =>{
+    for (let count = 0; count < articles.data.length; count++){ 
+     
+      let articlesTable = document.getElementById('articles-table');
+      articlesTable.innerHTML += `<tr><td>${articles.data[count].title}</td>
+      <td>${articles.data[count].date}</td><td><input
+              type='button' value='delete' onclick="removeArticle('${count}','${articles.data[count]._id}');">
+              </td></tr>`;  
+  }
+  
+  })
   .catch(err => {
     alert('An error occurred while retrieving articles.')
     console.log(err)
   })
   
-  
-  //Function to input data from api into the articles table
-  const displayArticlesInTable = (snaps) => {
-    for (let count = 0; count < snaps.data.length; count++) {
-      let articlesTable = document.getElementById('articles-table');
-          articlesTable.innerHTML += `<tr><td>${snaps.data[count].title}</td>`+
-          `<td>${snaps.data[count].date}</td><td><input 
-           type='button' value='delete' onclick="removeArticle('${count}','${snaps.data[count]._id}');"></td></tr>`
-        
-    }
-  }
-  
-  const removeArticle = (count,id) => {
+  //Function to delete an article
+  function removeArticle (count,id) {
     let httpVal = 'https://hervebu.herokuapp.com/articles/' + id
-    console.log(httpVal)
     fetch(
-       httpVal,
+    httpVal,
     {
-      method: 'DELETE',
-      headers: {
+    method: 'DELETE',
+    headers: {
         'Accept': 'application/json, */*',
         'auth_token': token1
-      }
+    }
     }).then(res => res.json())
     .then(display => {
-       document.getElementById('articles-table').deleteRow(count+1)
+    document.getElementById('articles-table').deleteRow(count+1)
     })
     .catch(err => {
-      alert('Unable to delete the  article')
-      console.log(err)})
-   
+    alert('Unable to delete the  article')
+    console.log(err)})    
   }
   
   //function to logout 
@@ -95,4 +94,3 @@ if (!token1) {
        window.location.replace("login.html")  
   }
 }
-
