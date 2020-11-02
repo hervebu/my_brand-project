@@ -1,11 +1,14 @@
 
-.homepage-top-div {
+.blog-top-div {
     background: url(../images/blog-image.png);
 }
 .homepage-top-div-hire_me {
     color: #ffffff;
     margin-right: 0;
     Padding: 20px 40PX;
+}
+.article-nav-bar {
+    background-color: rgb(0, 0, 0);
 }
 .btn-2 {
     margin-left: 3%;
@@ -14,8 +17,30 @@
 .homepage-top-div-text {
     color: #ffffff;
 }
-#blogs {
-    height: 1300px;
+#background {
+    width: 100%;
+    display:block;
+    min-height: 700px;
+}
+#article-par {
+    background-color: rgba(255, 255, 255, 0.945);
+    width: 80%;
+    margin: 0px 10% 70px;
+    padding: 20px;
+}
+
+h1 {
+    color: rgba(197, 194, 194, 0.904);
+    width: 80%;
+    margin: 30px 10% 0px;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.432);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular',
+     'Lucida Grande', 'Lucida Sans Unicode', Geneva, 
+     Verdana, sans-serif;
+    font-size: 50px;
+    
 }
 .blogs-heading {
     margin: 5% 6% 0;
