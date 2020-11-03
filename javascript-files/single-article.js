@@ -12,9 +12,9 @@ fetch(
   ).then(res => res.json())
   .then(article => {
       
-     let backgroundImg = `${article['requested article'].coverImgUrl}`
-      document.getElementById('background').style.background = `url('${backgroundImg}')`
-      document.getElementById('background').style.backgroundSize = 'cover'
+    //  let backgroundImg = `${article['requested article'].coverImgUrl}`
+    //   document.getElementById('background').style.background = `url('${backgroundImg}')`
+    //   document.getElementById('background').style.backgroundSize = 'cover'
       let articleParagraph = document.getElementById('article-par')
       articleParagraph.innerHTML += `<h2 id="article-title">${article['requested article'].title}</h2>
       <p id="article-body">

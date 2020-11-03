@@ -55,7 +55,7 @@ if (!token1) {
       let articlesTable = document.getElementById('articles-table');
       articlesTable.innerHTML += `<tr><td>${articles.data[count].title}</td>
       <td>${articles.data[count].date}</td><td><input
-              type='button' value='delete' onclick="removeArticle('${count}','${articles.data[count]._id}');">
+              type='button' value='delete' onclick="removeArticle(${count},'${articles.data[count]._id}');">
               </td></tr>`;  
   }
   

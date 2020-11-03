@@ -4,13 +4,14 @@ if (!token1) {
     alert('You have to login to continue')
     window.location.assign('../Ui-templates/login.html')
   } else {
-    var addArticleForm = document.getElementById('article-form');
-    addArticleForm.addEventListener("submit",submitFun);
+    var addArticleForm = document.getElementById('article-form');  
+    var addArticleBtn = document.getElementById('add-blog');
+    addArticleBtn.addEventListener("click",submitFun);
     
      function submitFun(e) {
         e.preventDefault()
         let articleTitle = document.getElementById('blog-title').value
-        let articleBody= document.getElementById('blog-body').value
+        let articleBody= tinymce.get("blog-body").getContent();
         let imgUrl = document.getElementById('coverImageFile').value
         fetch(
             'https://hervebu.herokuapp.com/articles/new',
